@@ -20,9 +20,9 @@ import lombok.NoArgsConstructor;
 public class User {
 
     
-    public User(String username, String passowrd, List<Authority> authorities) {
+    public User(String username, String password, List<Authority> authorities) {
         this.username = username;
-        this.passowrd = passowrd;
+        this.password = password;
         this.authorities = authorities;
     }
 
@@ -32,7 +32,7 @@ public class User {
 
     private String username;
 
-    private String passowrd;
+    private String password;
 
     //Se crea una tabla con iintermedia de relacion de conexión con las entidades User y Authority
     @ManyToMany(fetch = FetchType.EAGER)
