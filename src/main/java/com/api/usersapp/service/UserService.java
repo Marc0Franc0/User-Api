@@ -1,6 +1,7 @@
 package com.api.usersapp.service;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.stereotype.Service;
 
@@ -11,10 +12,10 @@ public interface UserService {
 
     List<User> getAll();
 
-    User getById(Long id);
+    Optional<User> getById(Long id);
 
     User updateById(Long id,RegisterRequest request);
 
-    String deleteById(Long id);
+    Optional<User> deleteById(Long id);
     
 }

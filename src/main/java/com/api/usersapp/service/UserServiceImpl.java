@@ -1,11 +1,10 @@
 package com.api.usersapp.service;
 
 import java.util.List;
+import java.util.Optional;
 
-import org.apache.el.stream.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import com.api.usersapp.security.auth.RegisterRequest;
 import com.api.usersapp.security.model.User;
 import com.api.usersapp.security.repository.UserRepository;
@@ -23,9 +22,9 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public User getById(Long id) {
+    public Optional<User> getById(Long id) {
         // TODO Auto-generated method stub
-       return userRepository.findById(id).get();
+       return userRepository.findById(id);
     }
 
     @Override
@@ -34,16 +33,16 @@ public class UserServiceImpl implements UserService {
     User userModified = userRepository.findById(id).get();
     userModified.setUsername(request.getUsername());
     userModified.setPassword(request.getPassword());
-   return userRepository.save(userModified);
-  
+    userRepository.save(userModified);
+    return userModified;
        
     }
 
     @Override
-    public String deleteById(Long id) {
+    public Optional<User> deleteById(Long id) {
          
           userRepository.deleteById(id);
-          return "User id "+id+" eliminado";
+          return userRepository.findById(id);
     }
     
 }
