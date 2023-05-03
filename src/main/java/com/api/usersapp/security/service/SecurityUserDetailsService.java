@@ -1,12 +1,13 @@
-package com.api.usersapp.service;
+package com.api.usersapp.security.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
-import com.api.usersapp.repository.UserRepository;
-import com.api.usersapp.security.SecurityUser;
+
+import com.api.usersapp.security.repository.UserRepository;
+import com.api.usersapp.security.utils.SecurityUser;
 
 @Service
 public class SecurityUserDetailsService implements UserDetailsService {

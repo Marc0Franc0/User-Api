@@ -1,9 +1,9 @@
-package com.api.usersapp.security;
+package com.api.usersapp.security.utils;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.GrantedAuthority;
 
-import com.api.usersapp.model.Authority;
+import com.api.usersapp.security.model.Authority;
 
 import lombok.AllArgsConstructor;
 

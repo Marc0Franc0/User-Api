@@ -1,4 +1,4 @@
-package com.api.usersapp.model;
+package com.api.usersapp.security.model;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;

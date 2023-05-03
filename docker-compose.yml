@@ -11,6 +11,8 @@ services:
       SPRING_DATASOURCE_URL: jdbc:mysql://db:3306/users_app
       SPRING_DATASOURCE_USERNAME: root
       SPRING_DATASOURCE_PASSWORD: root
+      DATA_USER_ADMIN: marco
+      DATA_PASSWORD_ADMIN : 1234
     networks:
       - app-db
   db:

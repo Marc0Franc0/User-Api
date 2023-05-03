@@ -1,11 +1,13 @@
-package com.api.usersapp.security;
+package com.api.usersapp.security.utils;
 
 import java.util.Collection;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
-import com.api.usersapp.model.User;
+
+import com.api.usersapp.security.model.User;
+
 import lombok.AllArgsConstructor;
 
 
