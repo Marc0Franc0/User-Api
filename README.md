@@ -1,11 +1,11 @@
 # UsersApp
 
-1.Clone this repository: git clone https://github.com/Marc0Franc0/UsersApp.git
-2.Navigate to the folder: cd UsersApp
+1. Clone this repository: git clone https://github.com/Marc0Franc0/UsersApp.git
+2. Navigate to the folder: cd UsersApp
 
 ## Requirements for running with maven
 
-Navigate to: [http://localhost:9090/](http://localhost:9090/)
+Navigate to: [http://localhost:9090/swagger-ui/index.html](http://localhost:9090/swagger-ui/index.html)
 
 For building and running the application you need:
 
@@ -20,7 +20,7 @@ mvn spring-boot:run
 
 ## Requirements for running with docker
 
-Navigate to: [http://localhost:9090/](http://localhost:9090/)
+Navigate to: [http://localhost:9090/swagger-ui/index.html](http://localhost:9090/swagger-ui/index.html)
 
 For building and running the application you need:
 
