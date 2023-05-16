@@ -1,11 +1,11 @@
 # user-api
 
-1. Clone this repository: git clone https://github.com/Marc0Franc0/UsersApp.git
-2. Navigate to the folder: cd UsersApp
+1. Clone this repository: git clone https://github.com/Marc0Franc0/user-api.git
+2. Navigate to the folder: cd user-api
 
 ## Requirements for running with maven
 
-Navigate to: [http://localhost:9090/swagger-ui/index.html](http://localhost:9090/swagger-ui/index.html)
+Navigate to: [http://localhost:9090/swagger-ui/index.html](http://localhost:8080/swagger-ui/index.html)
 
 For building and running the application you need:
 
