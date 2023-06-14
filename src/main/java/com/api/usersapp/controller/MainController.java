@@ -17,12 +17,12 @@ import com.api.usersapp.security.model.User;
 import com.api.usersapp.service.UserService;
 
 @RestController
-@RequestMapping(value = "/api")
+@RequestMapping(value = "/api/users")
 public class MainController {
 
     @Autowired
     UserService userService;
-    @GetMapping("/users")
+    @GetMapping("/")
     public ResponseEntity<List<User>> getAllUsers() {
         List<User> users =userService.getAll();
         if(users.size()!=0){
@@ -33,7 +33,7 @@ public class MainController {
      
     }
 
-    @GetMapping("/get/{id}")
+    @GetMapping("/{id}")
     public ResponseEntity<User> getUser(@PathVariable Long id) {
         Optional<User>user = userService.getById(id);
         if(user.isPresent()){
@@ -44,7 +44,7 @@ public class MainController {
     
     }
 
-    @PutMapping("/update/{id}")
+    @PutMapping("/{id}")
     public ResponseEntity<String> updateUser(@PathVariable Long id, @RequestBody RegisterRequest request) {
         User user = userService.updateById(id,request);
         if(user!=null){
@@ -54,7 +54,7 @@ public class MainController {
         }
     }
 
-    @DeleteMapping("/delete/{id}")
+    @DeleteMapping("/{id}")
     public ResponseEntity<String> deleteUser(@PathVariable Long id) {
         Optional<User> user = userService.deleteById(id);
         if(user.isPresent()){
