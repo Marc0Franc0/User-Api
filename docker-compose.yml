@@ -2,16 +2,17 @@ version: "3.9"
 services:
   app:
     container_name: app-container
-    build: .
+    image: marc0franc0/user-api:1.0.0
+    #build: .
     ports:
       - "9090:8080"
     restart: always
     environment:
-      SPRING_JPA_HIBERNATE_DDL_AUTO: create
+      SPRING_JPA_HIBERNATE_DDL_AUTO: update
       SPRING_DATASOURCE_URL: jdbc:mysql://db:3306/users_app
       SPRING_DATASOURCE_USERNAME: root
       SPRING_DATASOURCE_PASSWORD: root
-      DATA_USER_ADMIN: marco
+      DATA_USER_ADMIN: admin
       DATA_PASSWORD_ADMIN : 1234
     networks:
       - app-db
